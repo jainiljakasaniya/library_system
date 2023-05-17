@@ -1,0 +1,27 @@
+{
+  "name": "library_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nyc --reporter=text mocha --timeout 20000 --watch-extensions js \"./test/*.spec.js\" --exit",
+    "test:watch": "mocha --watch ./test/*.spec.js",
+    "coverage": "nyc --reporter=text --reporter=lcov npm test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "mocha": "^10.2.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.1.1",
+    "nyc": "^15.1.0",
+    "rewire": "^6.0.0",
+    "validator": "^13.9.0"
+  }
+}
