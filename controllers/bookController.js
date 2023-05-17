@@ -19,8 +19,8 @@ module.exports = {
       const book = new Book({
         ...req.body
       })
-      const savedbook = await book.save()
-      res.status(200).json({ message: "Book created", book: savedbook })
+      const savedBook = await book.save()
+      res.status(200).json({ message: "Book created", book: savedBook })
     } catch (error) {
       /* istanbul ignore next */
       next(error);
@@ -49,7 +49,7 @@ module.exports = {
       next(err)
     }
   },
-  searchStudnet: async (req, res) => {
+  searchStudent: async (req, res) => {
     // 11. Get students by matching books (Take book(s) id)
     try {
       const students = await Student.find({ 'bookRent.bookId': { $in: req.params.bookId } }).populate('bookRent.bookId').exec();

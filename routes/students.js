@@ -15,7 +15,7 @@ router.route('/:studentId')
   .put(auth, validator('updateStudentSchema'), studentController.updateStudent);
 
 router.route('/:studentId/book')
-  .put(auth, validator('newbookSchema'), studentController.addStudentBook);
+  .put(auth, validator('newBookSchema'), studentController.addStudentBook);
 
 router.route('/name/:name/email/:email')
   .get(auth, validator('searchStudentSchema'), studentController.searchStudent);

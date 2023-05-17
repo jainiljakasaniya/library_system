@@ -15,6 +15,6 @@ router.route('/:bookId')
   .put(auth, validator('updateBookSchema'), bookController.updateBook);
 
 router.route('/:bookId/students')
-  .get(auth, bookController.searchStudnet);
+  .get(auth, bookController.searchStudent);
 
 module.exports = router;

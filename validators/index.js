@@ -63,7 +63,7 @@ module.exports = {
       }).unknown(true))
     }).unknown(true)
   }).unknown(true),
-  newbookSchema: Joi.object({
+  newBookSchema: Joi.object({
     body: Joi.object({
       bookId: Joi.string().required(),
       rentDate: Joi.date().required()

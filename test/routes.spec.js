@@ -322,7 +322,7 @@ describe('Testing express app routes', () => {
             expect(response.body).to.have.property('message');
           });
       });
-      it('PUT /:studentId/book/:bookId should successfully update student book rentdate.', async () => {
+      it('PUT /:studentId/book/:bookId should successfully update student book rent date.', async () => {
         return chai.request(app)
           .put('/student/63ea0777999b205acf9ccf5b/book/63e5cc7b05082ce294277dbe')
           .set('Authorization', token)
@@ -361,7 +361,7 @@ describe('Testing express app routes', () => {
             expect(response.body).to.have.property('message');
           });
       });
-      it('DELETE /:studentId/book/:bookId should delete book for spcific student.', async () => {
+      it('DELETE /:studentId/book/:bookId should delete book for specific student.', async () => {
         return chai.request(app)
           .delete('/student/63ea0777999b205acf9ccf5b/book/63e5cbe305082ce294277dbc')
           .set('Authorization', token)

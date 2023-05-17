@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const boookSchema = mongoose.Schema({
+const bookSchema = mongoose.Schema({
   ISBN: {
     type: String,
     required: true,
@@ -13,7 +13,7 @@ const boookSchema = mongoose.Schema({
   language: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Book', boookSchema);
+module.exports = mongoose.model('Book', bookSchema);
 
 // {
 //     "ISBN": "78787",

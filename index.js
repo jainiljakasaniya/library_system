@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const studentRoutes = require("./routes/students");
 const bookRoutes = require("./routes/books");
 const authenticationRoute = require("./routes/authentication");
-const errorConstatnt = require("./middleware/error");
+const errorConstant = require("./middleware/error");
 const logger = require('./middleware/logger')
 
 const app = express();
@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 // error handing
 app.use((err, req, res, next) => {
   console.error(err);
-  const errorObj = errorConstatnt[err.message] || errorConstatnt.INTERNAL_SERVER_ERROR;
+  const errorObj = errorConstant[err.message] || errorConstant.INTERNAL_SERVER_ERROR;
   console.log('errorObj :>> ', errorObj);
   res.status(errorObj.status).json({
     message: errorObj.message
